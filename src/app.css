@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slide-left {
+  animation-name: slideLeft;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+}
+
+.slide-right {
+  animation-name: slideRight;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.number-pop {
+  animation: pop 0.2s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.text-black {
+  color: black;
+}
+.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark .dial-button {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark .panel {
+  background-color: #2d2d2d;
+}
+
+ActionBar {
+  background-color: #65adf1;
+  color: white;
+}
+
+.dark ActionBar {
+  background-color: #1a1a1a;
+}
+
+
+.text-black {
+  color: black;
+}
+
+
+.dialer-button {
+  width: 130px;
+  height: 130px;
+  font-size: 24px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Button Click Effect */
+.dialer-button:active {
+  transform: scale(0.85);
+  background-color: #e0e0e0;
+}
+
+
+.call-button {
+  width: 130px;
+  height: 130px;
+  font-size: 32px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 4px 12px rgba(0, 128, 0, 0.4);
+  transition: transform 0.15s ease, background-color 0.3s ease;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.call-button:active {
+  transform: scale(0.9);
+  background-color: #1f8e3a;
+}
+
+.delete-button {
+  width: 120px;
+  height: 80px;
+  font-size: 15px;
+  background-color: #ccc;
+  color: black;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 8px rgba(30, 4, 103, 0.2);
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.delete-button:active {
+  transform: scale(0.85);
+  background-color: #b5b5b5;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.icon-button:active {
+  opacity: 0.5;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
